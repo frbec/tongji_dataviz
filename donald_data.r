@@ -6,7 +6,7 @@
 library(twitteR)
 
 # Authorize
-setup_twitter_oauth('PIT7p4Gknr0KWrjfNAEnoSagb', 'DcaFMmbXbLS8zundl08pma4YBC7RjNb9tb9t4pWj9YZ3vBlxal', '143413447-1RVnSyVnJEFVuYE5I4WXE97uNZLDAJIm6Ge0ApKX', 'ZtiWxgGaIrCdMTnFIM5ueK7imXUIeOghQkwffkz2Y71nl')
+setup_twitter_oauth('key', 'key', 'key', 'key')
 
 N=10000  # tweets to request from each query
 
