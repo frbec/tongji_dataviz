@@ -10,7 +10,7 @@ date <- "2016-05-03"
 filename <- paste(c("../Datasets/donald_",date,".xlsx"), collapse="")
 #filename <- paste(c("../Datasets/donald_",date,".csv"), collapse="")
 
-tweets <- read.xlsx("../Datasets/twitter_data_noRT.xlsx", 1, colIndex=c(1))
+tweets <- read.xlsx(filename, 1, colIndex=c(1))
 #tweets <- read.csv(filename)
 print("Read file OK")
 
@@ -33,8 +33,7 @@ words <- sort(rowSums(as.matrix(tweet.tdm)), decreasing=TRUE)
 words.df <- data.frame(word = names(words), freq=words)
 words.df[1] <- NULL
 
-#writename <- paste(c("word_frequency_", date, ".xlsx"), collapse="")
-writename <- paste(c("word_frequency_baidu.xlsx"), collapse="")
+writename <- paste(c("word_frequency_", date, ".xlsx"), collapse="")
 write.xlsx(words.df, writename)
 
 col <- brewer.pal(6,"Dark2")
